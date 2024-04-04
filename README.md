@@ -28,6 +28,6 @@ Here are three examples of the loss and generalization error curves during train
 
 We train the linear model with different number training samples $N$ and plot the average (across regenerated datasets) generalization error versus $N$​.
 
-![double-descent](/home/zyd/G/tn_asst7/fig/double-descent.svg)
+![double-descent](fig/double-descent.svg)
 
 Known as the double descent, the generalization error increase with the number of training samples from $1$ to $D$; and decrease with the number of training samples from $D$​​ to infinity.

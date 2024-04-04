@@ -6,7 +6,7 @@ This repository reproduces the double descent curve described in Figure 2 in
 
 ## Setup
 
-Let ${\bf x} \in \mathbb R^D$ represent an arbitrary input and let $\{{\bf x}_n, y_n \}_{n=1}^N$ be a supervised learning training set.
+Let ${\bf x} \in \mathbb R^D$ represent an arbitrary input and let $`\{{\bf x}_n, y_n \}_{n=1}^N`$ be a supervised learning training set.
 The scalar output $y_n$ is generated as
 
 $$y_n = {\bf w}^* \cdot {\bf x}_n + \epsilon_n ,\quad {\bf x}_n \overset{\text{iid}}{\sim} \mathcal N({\bf 0}, {\bf I} / D), \epsilon_n \overset{\text{iid}}{\sim} \mathcal N(0, \sigma^2)$$

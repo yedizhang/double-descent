@@ -24,6 +24,12 @@ Here are three examples of the loss and generalization error curves during train
 | ![N20_D100](fig/N20_D100.svg) | ![N100_D100](fig/N100_D100.svg) | ![N1000_D100](fig/N1000_D100.svg) |
 | ----------------------------- | ------------------------------- | --------------------------------- |
 
+To generate these plots, set the hyperparameters as you like and run
+
+```bash
+python dd_linreg.py
+```
+
 ## Double Descent
 
 We train the linear model with different number training samples $N$ and plot the average (across regenerated datasets) generalization error versus $N$​.

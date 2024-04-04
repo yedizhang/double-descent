@@ -29,20 +29,20 @@ def sweep(repeat=20):
             Eg_avg[n] += Eg[-1]
     Eg_avg = Eg_avg / repeat
     print(Eg_avg)
-    plt.scatter(N_, Eg_avg)
+    plt.scatter(N_, Eg_avg, c='k', s=10)
     plt.ylabel('Generalization error')
     plt.xlabel('# of training samples')
     plt.show()
 
 
-def train(N, D=100, SNR=1.414, T=500, plot=False):
+def train(N, D=100, SNR=2, T=500, plot=False):
     """
     N: number of training samples
     D: input dimension
     SNR: signal-to-noise ratio
     T: number of epochs
     """
-    w = np.random.normal(0, SNR, D)
+    w = np.random.normal(0, np.sqrt(SNR), D)
     noise = np.random.normal(0, 1, N)
     x_train = np.random.multivariate_normal(np.zeros(D), np.eye(D)/D, N)
     y_train = x_train @ w + noise
@@ -70,8 +70,11 @@ def train(N, D=100, SNR=1.414, T=500, plot=False):
         optimizer.step()
 
     if plot:
-        plt.plot(Ls/Ls[0], 'k') 
-        plt.plot(Eg/Eg[0], 'r')
+        plt.plot(Ls/Ls[0], 'k', label='Loss') 
+        plt.plot(Eg/Eg[0], 'r', label='$E_g$')
+        plt.title('N={}, D={}, SNR={}'.format(N, D, SNR))
+        plt.xlabel('Epoch')
+        plt.legend()
         plt.show()
     print("N={}, Loss={}, Eg={}".format(N, Ls[-1], Eg[-1]))
 

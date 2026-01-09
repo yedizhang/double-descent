@@ -15,7 +15,7 @@ We train a linear model $\hat y = {\bf w} \cdot {\bf x}$​ to fit the training 
 
 We are interested in the generalization error $E_g$ on novel samples, which is defined as 
 
-$$E_g \equiv \left\langle (y^* - \hat y)^2 \right\rangle\rangle_{{\bf x},\epsilon}=\left\langle ({\bf w}^* \cdot {\bf x} - {\bf w} \cdot {\bf x})^2 \right\rangle_{{\bf x},\epsilon}$$
+$$E_g \equiv \left\langle (y^* - \hat y)^2 \right\rangle_{{\bf x},\epsilon}=\left\langle ({\bf w}^* \cdot {\bf x} - {\bf w} \cdot {\bf x})^2 \right\rangle_{{\bf x},\epsilon}$$
 
 ## Training
 
